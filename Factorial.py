@@ -1,5 +1,5 @@
 a = int(input("Enter a "))
-E=0
+E=1
 N=1
 while N<=a:
     E=E*N
