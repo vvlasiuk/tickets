@@ -20,4 +20,4 @@ if is_number(x): # Якщо значення змінної х є числом
         y = abs(x)
     print(y)
 else:
-    print("x isn`t number")
+    print("")
