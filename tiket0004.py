@@ -1,34 +1,21 @@
+# Найти корни квадратного уравнения
+
 import math
-def is_number(x):
+
+def input_float(s):
+    a = input(s) #  Зміній а присвоюємо значення введеної строки, користувачеві виводиться текст параметра s, після чого він вводть текст і натискає клавішу ентер.
+
     try:
-        float(x)
-        return True
+        return float(a)
     except ValueError:
-        return False
+        print("isn`t number")
+        quit()
 
 print("ax2 + bx + c = 0")
 
-a = input("Enter a = ")
-
-if not is_number(a):
-    print("a isn`t number")
-    quit()
-
-b = input("Enter b = ")
-
-if not is_number(b):
-    print("b isn`t number")
-    quit()
-
-c = input("Enter c = ")
-
-if not is_number(c):
-    print("c isn`t number")
-    quit()
-
-a = float(a)
-b = float(b)
-c = float(c)
+a = input_float("Enter a = ")
+b = input_float("Enter b = ")
+c = input_float("Enter c = ")
 
 if a == 0:
     print(" a can`t be zero")
@@ -45,7 +32,8 @@ if D > 0:
     print("x2 = " + str(x2))
 
 if D == 0:
-    x = -b / a
+    x = -b / 2*a
     print("x = "+ str(x))
+
 if D < 0:
     print("Not rezult")
