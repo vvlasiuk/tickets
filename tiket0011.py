@@ -27,5 +27,6 @@ else:
     Sheldon = b/a-e/d
     y = (c/a-f/d)/Sheldon
     x = (c-b*y)/a
+
     print("x = "+str(x))
     print("y = "+str(y))
