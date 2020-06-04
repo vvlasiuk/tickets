@@ -11,3 +11,5 @@ if a.isdigit():
     print(sum)
 else:
     print("a isn`t int type ")
+
+

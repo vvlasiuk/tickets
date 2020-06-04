@@ -1,16 +1,19 @@
-#Перевести десятковий дріб в дріб
+#Перевести десятковий дрі в дріб
 
 def str_drib(c):
+    if c == int(c):
+        return int(c)
+
     d = 0.0000000001
-    b = 1
+    b = 0
     a = 1
     y = 0
     while abs(y - a) > d:
         b = b + 1
         a = b * c
         y = int_r(a)
-    a = int(a)
-    return (str(a)+"/"+str(b))
+    a = int_r(a)
+    return str(a)+"/"+str(b)
 
 def int_r(num):
     num = int(num + (0.5 if num > 0 else -0.5))
@@ -26,6 +29,8 @@ def input_float(s):
         quit()
 
 c = input_float("Enter numeric = ")
+
 d = str_drib(c)
+
 
 print(d)
