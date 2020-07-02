@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Гра камінь, ножиці, папір</title>
+    <style>
+    .color_red {
+     color: green;}
+    .color_blue{
+     color: blue;}
+    </style>
+  </head>
+  <body>
+      <img src="{{url_for('static', filename='rps.png')}}" width="600" height="600" align="right" vspace="5" hspace="200"/>
+      <h1><span class="color_red">Гра камінь, ножиці, папір.</span></h1>
+      <h2>Гра до 5 балів.</h2>
+      <h2>Зробіть хід:</h2>
+      <a href="http://127.0.0.1:5000/game/1"><h1>Камінь</h1></a>
+      <p><a href="http://127.0.0.1:5000/game/2"><h1>Ножиці</h1></a></p>
+      <p><a href="http://127.0.0.1:5000/game/3"><h1>Папір</h1></a></p>
+      <h2>Ваш хід:  <span class="color_blue">{{a}} </span>Хід бота:<span class="color_red">  {{b}}</span></h2>
+      <h2>Результат раунду: <span class="color_red"> {{r}}</span></h2>
+      <h2><span class="color_blue"> Ваш рахунок: {{a_count}}</span>  <span class="color_red"> Рахунок бота: {{b_count}}</span></h2>
+      <h2>Результат гри: <span class="color_red"> {{win}} </span></h2>
+  </body>
+</html>
