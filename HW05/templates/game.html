@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Знову в бій!</title>
+</head>
+<body>
+    <style>
+        body {
+         background-image: url({{url_for('static', filename = 'ring3.jpg')}});
+         background-position: top;
+         background-repeat: no-repeat; /* Отменяем повторение фона */
+         background-position: center top;
+         }
+    </style>
+
+
+    <form method="post" action="/">
+        <center>
+<!--            <p> Користувач: {{user_name}} <button name = "btn_login"  value="Quit">Вийти</button></p>-->
+            <p> Користувач: {{user_name}} </p>
+            <p><input type="hidden" name="user_name" value={{user_name}} ></p>
+            <p><input type="hidden" name="the_kick"  value="{{the_kick}}"></p>
+            <p><input type="hidden" name="the_block" value="{{the_block}}"></p>
+            <p><input type="hidden" name="enemy_result" value="{{enemy_result}}"></p>
+            <p><input type="hidden" name="my_result" value="{{my_result}}"></p>
+            <p><input type="hidden" name="result" value="{{result}}"></p>
+            <p><input type="hidden" name="user_pass" type="password" value={{user_pass}}></p>
+            <p><input type="hidden" name="kick" value={{kick}}></p>
+            <p><input type="hidden" name="block" value={{block}}></p>
+            <button name = "btn_index" value="index" >Вийти з рингу</button>
+            <p>Ви насели удар в {{the_kick}}</p>
+            <p>Ви зробили блок {{the_block}}</p>
+            <p>Результат бою: <br>
+            {{enemy_result}} <br>
+            {{my_result}}<br>
+            {{result}}
+            </p>
+<!--            <button name = "btn_login" value="fight">Оновити</button>-->
+            <button name = "btn_refresh" value="refresh">Оновити</button>
+            </center>
+    </form>
+</body>
+</html>
